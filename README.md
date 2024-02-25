@@ -1,0 +1,1 @@
+# docker-adguard-dns-sync
