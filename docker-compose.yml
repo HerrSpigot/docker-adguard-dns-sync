@@ -1,0 +1,23 @@
+services:
+  adguard_sync:
+    container_name: ${containerName}
+    image: docker-adguard-dns-sync:latest
+    environment:
+      AdguardURL: ${AdguardURL}
+      AdguardUser: ${AdguardUser}
+      AdguardPassword: ${AdguardPassword}
+    labels:
+      - "syncdns.rewrites=Rewrite('${rewriteDomain}', '${rewriteIP}')"
+    volumes:
+      - "${dataDir}:/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - bridge
+    hostname: ${hostname}
+    env_file:
+      - .env
+
+networks:
+  bridge:
+    external: true
+

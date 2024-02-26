@@ -1,0 +1,9 @@
+services:
+  hello-world:
+    container_name: hello-world
+    image: hello-world:latest
+    labels:
+      - "syncdns.rewrites=Rewrite('hello-world.local', '127.0.0.1')"
+
+
+
