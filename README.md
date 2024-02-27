@@ -13,12 +13,20 @@ services:
     container_name: hello-world
     image: hello-world:latest
     labels:
-      - "syncdns.rewrites=Rewrite('hello-world.local', '127.0.0.1') || Rewrite('hello-world.local2', '127.0.0.1') || Rewrite('hello-world3.local', '127.0.0.1')"
+      - "syncdns.rewrites=Rewrite('hello-world.local', '127.0.0.1')"
 ```
 Several DNS entries can also be assigned to a container.
 The number of possible entries is unlimited.
 It is mandatory to enter the IP address.
 This also allows entries to be stored for the containers that should only be accessible via a reverse proxy (e.g. traefik).
+```
+services:
+  hello-world:
+    container_name: hello-world
+    image: hello-world:latest
+    labels:
+      - "syncdns.rewrites=Rewrite('hello-world.local', '127.0.0.1') || Rewrite('hello-world.local2', '127.0.0.1') || Rewrite('hello-world3.local', '127.0.0.1')"
+```
 
 ## Ready-to-use images / Docker Hub
 Ready-to-use images are available on Docker Hub for the linux/amd64 and linux/arm64 architectures.
