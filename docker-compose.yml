@@ -6,6 +6,7 @@ services:
       AdguardURL: ${AdguardURL}
       AdguardUser: ${AdguardUser}
       AdguardPassword: ${AdguardPassword}
+      DNSOverwrite: true # to-do
     labels:
       - "syncdns.rewrites=Rewrite('${rewriteDomain}', '${rewriteIP}')"
     volumes:
