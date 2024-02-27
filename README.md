@@ -77,7 +77,7 @@ dataDir=/path/to/appdata
 The values shown in the example must be entered to start the container, otherwise it will not start.
 It is also recommended to set a restart policy (at least "unless-stopped").
 
-## Deployment by starting the container with "docker-run"
+### Deployment by starting the container with "docker-run"
 ```
 docker run \
 --name adguard_sync \
