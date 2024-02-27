@@ -33,13 +33,13 @@ Ready-to-use images are available on Docker Hub for the linux/amd64 and linux/ar
 
 The following image tag can be used for the latest version of the respective architectures:
 
-linux/amd64:
-x86-latest / latest
+`linux/amd64`
+**x86-latest** or **latest**
 
-linux/arm64:
-arm-latest
+`linux/arm64`
+**arm-latest**
 
-All tags can be found on the following page:
+All tags can be found on this page:
 https://hub.docker.com/repository/docker/herrspigot/docker-adguard-dns-sync/tags
 
 ## Deployment (ready-to-use images)
